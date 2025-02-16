@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'game_screen.dart';
+import 'game_screen/game_screen.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -41,7 +41,7 @@ class _LandingPageState extends State<LandingPage> {
                   onTap: () {
                     Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (context) => GameScreen()),
+                      MaterialPageRoute(builder: (context) => GameScreen(5)),
                       (Route<dynamic> route) => false,
                     );
                   },
@@ -62,36 +62,54 @@ class _LandingPageState extends State<LandingPage> {
                   ),
                 ),
                 SizedBox(height: 100.h),
-                Container(
-                  width: 1000.w,
-                  height: 250.h,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(239, 214, 138, 39),
-                    borderRadius: BorderRadius.circular(40.r),
-                  ),
-                  child: Center(
-                      child: Text(
-                    "QUARDLE - 4 LETTERS",
-                    style: TextStyle(
-                      fontSize: 90.sp,
-                      color: Colors.white,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => GameScreen(4)),
+                      (Route<dynamic> route) => false,
+                    );
+                  },
+                  child: Container(
+                    width: 1000.w,
+                    height: 250.h,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(239, 214, 138, 39),
+                      borderRadius: BorderRadius.circular(40.r),
                     ),
-                    textAlign: TextAlign.center,
-                  )),
+                    child: Center(
+                        child: Text(
+                      "QUARDLE - 4 LETTERS",
+                      style: TextStyle(
+                        fontSize: 90.sp,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    )),
+                  ),
                 ),
                 SizedBox(height: 100.h),
-                Container(
-                  width: 1000.w,
-                  height: 250.h,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(239, 214, 138, 39),
-                    borderRadius: BorderRadius.circular(40.r),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => GameScreen(6)),
+                      (Route<dynamic> route) => false,
+                    );
+                  },
+                  child: Container(
+                    width: 1000.w,
+                    height: 250.h,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(239, 214, 138, 39),
+                      borderRadius: BorderRadius.circular(40.r),
+                    ),
+                    child: Center(
+                        child: Text(
+                      "SIXLE - 6 Letters",
+                      style: TextStyle(fontSize: 90.sp, color: Colors.white),
+                    )),
                   ),
-                  child: Center(
-                      child: Text(
-                    "SIXLE - 6 Letters",
-                    style: TextStyle(fontSize: 90.sp, color: Colors.white),
-                  )),
                 ),
               ],
             ),
