@@ -2,7 +2,7 @@
     <application
         android:label="Wordle Pro"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/game_icon">
         <activity
             android:name="com.example.wordle_pro.MainActivity"
             android:exported="true"
