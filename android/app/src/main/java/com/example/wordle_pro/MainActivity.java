@@ -1,4 +1,4 @@
-package com.example.wordle_pro;
+package com.rishabh.wordle_pro;
 
 import io.flutter.embedding.android.FlutterActivity;
 

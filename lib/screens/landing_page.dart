@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wordle/services/analytics.dart';
 
 import 'game_screen/game_screen.dart';
 
@@ -15,6 +16,8 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   @override
   void initState() {
+    Analytics.logException(
+        AssertionError("testing non fatal"), StackTrace.current);
     super.initState();
     // Set full screen mode when widget initializes
   }
